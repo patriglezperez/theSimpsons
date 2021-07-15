@@ -1,0 +1,297 @@
+@font-face {
+    font-family: "Good People";
+    src: url(./GOOD\ PEOPLE.otf);
+    font-family: "Mochido";
+    src: url(./Mochido.otf)
+}
+
+input{
+    visibility: hidden;
+}
+
+/**************Pagina entrada Quiz**********************/
+.entrada{
+    width: 100vw;
+    height: 100vh;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1{
+    font-size:100px;
+    text-align: center; 
+    color:#ffee58;
+    -webkit-text-stroke: 1px black;
+    letter-spacing: 2pt;
+    
+}
+h2{
+    font-size: 35px;
+    text-align: center; 
+    color: #e62f31;
+    -webkit-text-stroke: 1px black;
+    letter-spacing: 2pt;
+    
+}
+
+.boton{
+    background-color:#ffee58;
+    border: 4px solid black;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+    a:link, a:visited, a:active {
+        text-decoration:none;
+        color:rgb(45, 179, 212);
+        font-size: 50px;
+      }
+
+
+ /**************Pagina principal**********************/     
+body{
+
+    font-family: "Mochido",sans-serif;
+    background-color: rgb(45, 179, 212);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    background-image: url("./fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #64b3f6;
+ 
+}
+
+fieldset{
+    height: 100vh;
+    width: 100vw;
+    border: none;
+    /* margin-top: 20px;
+     */
+}
+
+.question {
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: stretch;
+    justify-content: space-evenly;
+    color: #e62f31;
+    -webkit-text-stroke: 1px black;
+    letter-spacing: 2pt;
+    text-align:center;
+    font-size: 30PX;
+
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    align-items: center;
+    font-size: 30px;
+   }
+    
+   .answer1{
+    width: 100%;
+    height: 20vh;
+   
+   }
+   .answer2{
+    width: 100%;
+    height: 20vh;
+   }
+   .answer3{
+    width: 100%;
+    height: 20vh;
+   }
+   .answer4{
+    width: 100%;
+    height: 20vh;
+   }
+
+    .answer1 > label {
+        width: 100%;
+        height: 20vh;
+        background-color: #ffee58;;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;   
+        
+    }
+
+        .answer > label:hover{
+            width: 100%;
+            height: 20vh;
+            opacity: 80%;
+            background-color:pink;
+            background-image:url(./fondoRosquillas.png);
+            
+        }
+    
+    .answer2 > label{
+        width: 100%;
+        height: 20vh;
+        background-color: #ffee58;;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;    
+    }
+        
+        
+    .answer3 > label{
+        width: 100%;
+        height: 20vh;
+        background-color: #ffee58;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center; 
+    }
+       
+    .answer4 > label{
+        width: 100%;
+        height: 20vh;
+        background-color: #ffee58;;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    .selected:checked{
+        background-color: pink;
+    }
+        
+        /**************preguntas con fotos**********************/
+       
+        label[type="radio"]{
+            width: 100%;
+            height:20vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+           
+        }
+     
+
+        img[src*="patty"]{
+            width: 100px;
+            height:100px;
+            margin-right: 10px;
+        }
+
+        img[src*="shelma"]{
+            width:100px;
+            height:100px;
+            margin-right: 10px;
+        }
+
+        img[src*="edna"]{
+            width:100px;
+            height:100px;
+            margin-right: 10px;
+        }
+
+        img[src*="flanders"]{
+            width:100px;
+            height:100px;
+            margin-right: 10px;
+        }
+
+    .envio{
+        width:100vw;
+        height: 10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    button{
+        color:#e62f31;
+        font-size:30px;
+        background-color:rgb(45, 179, 212);
+        -webkit-text-stroke: 1px black;
+        letter-spacing: 2pt;
+        font-family: "Mochido",sans-serif;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+
+
+/**************responsive*******************************/
+        
+    @media screen and (min-width: 768px) {
+        
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction:row;
+            justify-content: space-around;
+            align-content: center;
+          
+           
+        }
+        .container > * {
+            width: 45%;
+          
+            margin-right: 30px;
+            margin-bottom: 12px;
+        }
+        /*.answer1, .answer2,.answer3, .answer4 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 320px;
+            height: 120px;
+           
+        }
+        .question{
+            width: 100vw;
+            height: 30vh;
+        }*/
+
+    @media screen and (min-width: 1366px) {
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100vw;
+            height: 43vh;
+            justify-content: space-around;
+            
+        }
+        .answer1, .answer2,.answer3, .answer4 {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 320px;
+            height: 120px;
+            
+        }
+        .question{
+            width: 100vw;
+            height: 30vh;
+        }
+    }
+}
